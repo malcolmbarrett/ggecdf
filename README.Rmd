@@ -1,0 +1,58 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+
+# ggecdf
+
+<!-- badges: start -->
+<!-- badges: end -->
+
+The goal of ggecdf is to easily create weighted and unweighted empirical cumulative distributions (ECDFs) in ggplot2
+
+## Installation
+
+You can install the development version of ggecdf from [GitHub](https://github.com/) with:
+
+``` r
+# install.packages("devtools")
+devtools::install_github("malcolmbarrett/ggecdf")
+```
+
+## Example
+
+```{r example}
+library(ggecdf)
+library(ggplot2)
+# dataset with weights
+nhefs_weights <- tidysmd::nhefs_weights
+
+ggplot(
+  nhefs_weights,
+  aes(x = smokeyrs, color = factor(qsmk), group = factor(qsmk))
+) +
+  geom_ecdf() +
+  xlab("Smoking Years") +
+  ylab("Proportion <= x (unweighted)")
+
+
+ggplot(
+  nhefs_weights,
+  aes(x = smokeyrs, color = factor(qsmk), group = factor(qsmk))
+) +
+  geom_ecdf(aes(weight = w_ato)) +
+  xlab("Smoking Years") +
+  ylab("Proportion <= x (weighted)")
+```
+
+
