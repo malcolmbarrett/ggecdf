@@ -1,5 +1,5 @@
 Package: ggecdf
-Title: What the Package Does (One Line, Title Case)
+Title: Calculate 'ECDFs' for 'ggplot2'
 Version: 0.0.0.9000
 Authors@R: 
     person("Malcolm", "Barrett", , "malcolmbarrett@gmail.com", role = c("aut", "cre"),
@@ -13,3 +13,5 @@ Imports:
     ggplot2
 Suggests: 
     tidysmd
+URL: https://github.com/malcolmbarrett/ggecdf
+BugReports: https://github.com/malcolmbarrett/ggecdf/issues
