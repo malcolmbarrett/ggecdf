@@ -1,5 +1,5 @@
 Package: ggecdf
-Title: Calculate 'ECDFs' for 'ggplot2'
+Title: Calculate Weighted and Unweighted 'ECDFs' for 'ggplot2'
 Version: 0.0.0.9000
 Authors@R: 
     person("Malcolm", "Barrett", , "malcolmbarrett@gmail.com", role = c("aut", "cre"),
