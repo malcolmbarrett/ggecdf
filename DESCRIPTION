@@ -8,7 +8,8 @@ Description: Easily create weighted and unweighted empirical cumulative
     distributions in 'ggplot2'. 'ggecdf' is an extension of 'ggplot2' that
     allows you to visualize 'ECDFs' via 'geom_ecdf()'.
 License: MIT + file LICENSE
-URL: https://github.com/malcolmbarrett/ggecdf
+URL: https://github.com/malcolmbarrett/ggecdf,
+    https://malcolmbarrett.github.io/ggecdf/
 BugReports: https://github.com/malcolmbarrett/ggecdf/issues
 Imports: 
     ggplot2
