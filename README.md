@@ -6,6 +6,8 @@
 <!-- badges: start -->
 
 [![R-CMD-check](https://github.com/malcolmbarrett/ggecdf/workflows/R-CMD-check/badge.svg)](https://github.com/malcolmbarrett/ggecdf/actions)
+[![Codecov test
+coverage](https://codecov.io/gh/malcolmbarrett/ggecdf/branch/main/graph/badge.svg)](https://app.codecov.io/gh/malcolmbarrett/ggecdf?branch=main)
 <!-- badges: end -->
 
 The goal of ggecdf is to easily create weighted and unweighted empirical
