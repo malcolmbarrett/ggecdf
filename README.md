@@ -31,7 +31,7 @@ nhefs_weights <- tidysmd::nhefs_weights
 
 ggplot(
   nhefs_weights,
-  aes(x = smokeyrs, color = factor(qsmk), group = factor(qsmk))
+  aes(x = smokeyrs, color = factor(qsmk))
 ) +
   geom_ecdf() +
   xlab("Smoking Years") +
@@ -47,7 +47,7 @@ ATO weight:
 ``` r
 ggplot(
   nhefs_weights,
-  aes(x = smokeyrs, color = factor(qsmk), group = factor(qsmk))
+  aes(x = smokeyrs, color = factor(qsmk))
 ) +
   geom_ecdf(aes(weights = w_ato)) +
   xlab("Smoking Years") +
