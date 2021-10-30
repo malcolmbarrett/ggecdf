@@ -4,6 +4,8 @@
 # ggecdf
 
 <!-- badges: start -->
+
+[![R-CMD-check](https://github.com/malcolmbarrett/ggecdf/workflows/R-CMD-check/badge.svg)](https://github.com/malcolmbarrett/ggecdf/actions)
 <!-- badges: end -->
 
 The goal of ggecdf is to easily create weighted and unweighted empirical
