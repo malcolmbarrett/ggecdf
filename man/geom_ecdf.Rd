@@ -77,11 +77,9 @@ visualization of distribution. \code{geom_ecdf()} is similar to
 \code{\link[ggplot2:stat_ecdf]{ggplot2::stat_ecdf()}} but it can also calculate weighted ECDFs.
 }
 \section{Aesthetics}{
-
-In addition to the aesthetics for \code{\link[ggplot2:stat_ecdf]{ggplot2::stat_ecdf()}}, \code{geom_ecdf()} also accepts:
-\itemize{
-\item weight
-}
+ In addition to the aesthetics for
+\code{\link[ggplot2:stat_ecdf]{ggplot2::stat_ecdf()}}, \code{geom_ecdf()} also accepts: \itemize{ \item
+weights }
 }
 
 \examples{
@@ -92,7 +90,7 @@ ggplot(
   nhefs_weights,
   aes(x = smokeyrs, color = factor(qsmk), group = factor(qsmk))
 ) +
-  geom_ecdf(aes(weight = w_ato)) +
+  geom_ecdf(aes(weights = w_ato)) +
   xlab("Smoking Years") +
   ylab("Proportion <= x")
 

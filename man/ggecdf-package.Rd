@@ -4,9 +4,17 @@
 \name{ggecdf-package}
 \alias{ggecdf}
 \alias{ggecdf-package}
-\title{ggecdf: What the Package Does (One Line, Title Case)}
+\title{ggecdf: Calculate Weighted and Unweighted 'ECDFs' for 'ggplot2'}
 \description{
-What the package does (one paragraph).
+Easily create weighted and unweighted empirical cumulative distributions in 'ggplot2'. 'ggecdf' is an extension of 'ggplot2' that allows you to visualize 'ECDFs' via 'geom_ecdf()'.
+}
+\seealso{
+Useful links:
+\itemize{
+  \item \url{https://github.com/malcolmbarrett/ggecdf}
+  \item Report bugs at \url{https://github.com/malcolmbarrett/ggecdf/issues}
+}
+
 }
 \author{
 \strong{Maintainer}: Malcolm Barrett \email{malcolmbarrett@gmail.com} (\href{https://orcid.org/0000-0003-0299-5825}{ORCID})

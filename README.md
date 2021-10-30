@@ -21,6 +21,8 @@ devtools::install_github("malcolmbarrett/ggecdf")
 
 ## Example
 
+`geom_ecdf()` allows you to create ECDFs based on ggplot’s `stat_ecdf()`
+
 ``` r
 library(ggecdf)
 library(ggplot2)
@@ -36,17 +38,20 @@ ggplot(
   ylab("Proportion <= x (unweighted)")
 ```
 
-<img src="man/figures/README-example-1.png" width="100%" />
+<img src="man/figures/README-example1-1.png" width="100%" />
+
+Additionally, `geom_ecdf()` supports a `weights` aesthetic to calculate
+weighted ECDFs. For instance, here’s the same variables weighted by an
+ATO weight:
 
 ``` r
-
 ggplot(
   nhefs_weights,
   aes(x = smokeyrs, color = factor(qsmk), group = factor(qsmk))
 ) +
-  geom_ecdf(aes(weight = w_ato)) +
+  geom_ecdf(aes(weights = w_ato)) +
   xlab("Smoking Years") +
   ylab("Proportion <= x (weighted)")
 ```
 
-<img src="man/figures/README-example-2.png" width="100%" />
+<img src="man/figures/README-example2-1.png" width="100%" />

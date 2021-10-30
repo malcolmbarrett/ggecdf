@@ -4,11 +4,9 @@
 #' visualization of distribution. `geom_ecdf()` is similar to
 #' [`ggplot2::stat_ecdf()`] but it can also calculate weighted ECDFs.
 #'
-#' @section Aesthetics:
-#' In addition to the aesthetics for [`ggplot2::stat_ecdf()`], `geom_ecdf()` also accepts:
-#' \itemize{
-#'   \item weight
-#' }
+#' @section Aesthetics: In addition to the aesthetics for
+#'   [`ggplot2::stat_ecdf()`], `geom_ecdf()` also accepts: \itemize{ \item
+#'   weights }
 #'
 #' @inheritParams ggplot2::stat_ecdf
 #'
@@ -23,7 +21,7 @@
 #'   nhefs_weights,
 #'   aes(x = smokeyrs, color = factor(qsmk), group = factor(qsmk))
 #' ) +
-#'   geom_ecdf(aes(weight = w_ato)) +
+#'   geom_ecdf(aes(weights = w_ato)) +
 #'   xlab("Smoking Years") +
 #'   ylab("Proportion <= x")
 #'
@@ -41,14 +39,14 @@ StatWeightedECDF <- ggplot2::ggproto(
   "StatWeightedECDF",
   ggplot2::StatEcdf,
   compute_group = function(data, scales, n = NULL, pad = NULL) {
-    if ("weight" %in% names(data)) {
+    if ("weights" %in% names(data)) {
       data <- data[order(data$x), ]
-      data$y <- cumsum(data$weight) / sum(data$weight)
+      data$y <- cumsum(data$weights) / sum(data$weights)
       data
     } else {
       ggplot2::StatEcdf$compute_group(data, scales, n = n, pad = pad)
     }
   },
-  required_aes = c("x", "group"),
-  optional_aes = "weight"
+  required_aes = c("x"),
+  optional_aes = "weights"
 )
